@@ -1,2 +1,4 @@
-# hello-world
-수정할 수 있겠지?! ㅎㅎ
+# Music Recommandation System Based on My Playlist
+
+기말과제
+
