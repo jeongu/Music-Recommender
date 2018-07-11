@@ -1,4 +1,4 @@
-# Music Recommandation System Based on My Playlist
+# Music Recommandation Algorithm Based on My Playlist
 개인의 음악 재생 데이터를 활용한 맞춤형 음악 추천 알고리즘
 
 ## 데이터
