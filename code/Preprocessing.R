@@ -8,9 +8,9 @@ Melon <- fread('bind_data_Melon/Melon.csv')[,-1]
 
 # Preprocessing
 Melon$flac[Melon$flac == ""] <- "No_Flac"
-Melon$like <- gsub("[°¡-ÆR]", "", Melon$like)
+Melon$like <- gsub("[ê°€-í£]", "", Melon$like)
 Melon$like <- gsub(",", "", Melon$like)
-Melon$reply <- gsub("[°¡-ÆR]", "", Melon$reply)
+Melon$reply <- gsub("[ê°€-í£]", "", Melon$reply)
 Melon$reply <- gsub(",", "", Melon$reply)
 Melon <- Melon[!(Melon$lyric == "")]
 
@@ -19,13 +19,13 @@ Melon$flac <- as.factor(Melon$flac)
 Melon$like <- as.numeric(Melon$like)
 Melon$reply <- as.numeric(Melon$reply)
 
-# genre ¹üÁÖ ÁÙÀÌ±â
+# genre ë²”ì£¼ ì¤„ì´ê¸°
 genre_list <- data.frame(table(Melon$genre)[table(Melon$genre)>10])$Var1
 genre_list <- genre_list[-c(14, 17, 21:27)]
 
 Melon <- Melon %>% filter(genre %in% genre_list)
 
-## genre º°·Î µ¥ÀÌÅÍ »ìÆìº¸±â
+## genre ë³„ë¡œ ë°ì´í„° ì‚´í´ë³´ê¸°
 temp1 <- Melon %>% filter(genre == "New Age")
 temp2 <- Melon %>% filter(genre == "Pop")
 temp3 <- Melon %>% filter(genre == "Rock")
@@ -50,7 +50,7 @@ data.frame(table(Melon$genre))
 pie(table(Melon$genre))
 barplot(table(Melon$genre))
 
-# °èÀı, ¿ù, ¿¬µµ ¸¸µé±â
+# ê³„ì ˆ, ì›”, ì—°ë„ ë§Œë“¤ê¸°
 Melon$Year <- substr(Melon$date, 1, 4)
 Melon$Year <- as.factor(Melon$Year)
 
@@ -72,9 +72,9 @@ Melon$Season <- Mon2Season(Melon$Mon)
 Melon$Season <- as.factor(Melon$Season)
 
 
-# reply¿Í likeÀÇ »ó°ü°ü°è »ìÆìº¸±â
+# replyì™€ likeì˜ ìƒê´€ê´€ê³„ ì‚´í´ë³´ê¸°
 temp <- Melon %>% filter(complete.cases(Melon))
-temp$title # ¼ÕÀ¸·Î Ã¤¿ì±â
+temp$title # ì†ìœ¼ë¡œ ì±„ìš°ê¸°
 summary(Melon)
 data.frame(table(Melon$genre))
 
@@ -90,7 +90,7 @@ temp %>%
   facet_wrap(~ genre)
 
 
-# ÀÛ»ç, ÀÛ°î, Æí°î
+# ì‘ì‚¬, ì‘ê³¡, í¸ê³¡
 temp1 <- Melon %>% filter(lyricist == "")
 temp2 <- Melon %>% filter(composer == "")
 temp3 <- Melon %>% filter(arranger == "")
@@ -100,7 +100,7 @@ temp <- data.frame(table(Melon$artist))
 temp2 <- temp[order(temp$Freq, decreasing = T),]
 
 
-# ÇÊ¿ä ¾ø´Â º¯¼ö Á¦°Å
+# í•„ìš” ì—†ëŠ” ë³€ìˆ˜ ì œê±°
 temp <- Melon %>% select(-date, -Mon, -lyricist, -composer, -arranger)
 write.csv(temp, "Melon_tidy.csv")
 
