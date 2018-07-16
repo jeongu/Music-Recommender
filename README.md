@@ -9,7 +9,7 @@
 
 추천의 대상이 되는 음악 정보는 Ginie의 Web에서 접근이 제한됐기 때문에 Melon을 사용했습니다.
 
-### 코드 설명
+### 코드
 (아직 코드 정리 작업이 필요합니다.)
 * processing_df   : 변수 전처리 작업
 * processing_text : 가사를 텍스트 전처리 후 Word2vec으로 vector화하여 유사도 계산
