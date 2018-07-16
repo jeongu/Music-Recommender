@@ -1,5 +1,5 @@
 # Music Recommandation Algorithm Based on My Playlist
-개인의 음악 재생 데이터를 활용한 맞춤형 음악 추천 알고리즘
+빅데이터 자료분석 학기말 프로젝트
 
 ### 데이터
 데이터와 크롤링 코드는 저작권 문제가 있어 커밋하지 않았습니다.
