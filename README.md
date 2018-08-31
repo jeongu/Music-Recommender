@@ -1,5 +1,5 @@
-# Music Recommandation Algorithm Based on My Playlist
-빅데이터 자료분석 학기말 프로젝트
+# Music Recommandation Based on My Playlist
+'Bigdata Analysis' Term Project
 
 ### 데이터
 데이터와 크롤링 코드는 저작권 문제가 있어 커밋하지 않았습니다.
@@ -10,7 +10,7 @@
 추천의 대상이 되는 음악 정보는 Ginie의 Web에서 접근이 제한됐기 때문에 Melon을 사용했습니다.
 
 ### 코드
-(아직 코드 정리 작업이 필요합니다.)
+(코드 정리 작업이 필요합니다.)
 * processing_df   : 변수 전처리 작업
 * processing_text : 가사를 텍스트 전처리 후 Word2vec으로 vector화하여 유사도 계산
 * gower           : 수치형, 범주형 변수를 동시에 고려한 거리 계산. 가사 유사도, 변수 유사도, 재생 횟수를 활용한 추천 리스트 생성
