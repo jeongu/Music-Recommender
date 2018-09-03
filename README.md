@@ -1,4 +1,4 @@
-# Music Recommandation Based on My Playlist
+# Music Recommendation Based on My Playlist
 'Bigdata Analysis' Term Project
 
 ### 데이터
