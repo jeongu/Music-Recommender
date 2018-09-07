@@ -11,9 +11,10 @@
 
 ### 코드
 (코드 정리 작업이 필요합니다.)
-* processing_df   : 변수 전처리 작업
-* processing_text : 가사를 텍스트 전처리 후 Word2vec으로 vector화하여 유사도 계산
-* gower           : 수치형, 범주형 변수를 동시에 고려한 거리 계산. 가사 유사도, 변수 유사도, 재생 횟수를 활용한 추천 리스트 생성
+* processing_df     : 변수 전처리 작업
+* processing_text   : 가사를 텍스트 전처리 후 Word2vec으로 vector화하여 유사도 계산
+* gower             : 수치형, 범주형 변수를 동시에 고려한 거리 계산. 가사 유사도, 변수 유사도, 재생 횟수를 활용한 추천 리스트 생성
+* music_recommender : preprocessing + modeling 코드 합치는 중 (converting R code to Python code)
 
 ### 프로젝트의 의미와 한계
 * 일상에서 제공받는 추천 서비스에 만족하지 못해 내 데이터로 나만의 추천 시스템을 구축하는 과정이 재밌었습니다. 추천 결과 또한 기대 이상이었습니다.
