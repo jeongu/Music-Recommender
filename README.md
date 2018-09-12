@@ -2,6 +2,7 @@
 'Bigdata Analysis' Term Project
 
 > 데이터
+
 데이터는 저작권 문제가 있어 커밋하지 않았습니다.
 
 * 음악 재생 리스트(Ginie) : 음악 정보 + 재생 횟수 정보
@@ -10,6 +11,7 @@
 추천의 대상이 되는 음악 정보는 Ginie의 Web에서 접근이 제한됐기 때문에 Melon을 사용했습니다.
 
 > 코드
+
 (코드 정리 작업 중입니다.)
 * music_recommender : data preprocessing + 추천 리스트 생성 코드 합치는 중
 
